@@ -1,0 +1,2 @@
+Igor;123456789;pre-pago;25
+Laura;987654321;pos-pago;50
