@@ -2,9 +2,7 @@ package com.company.DAO;
 
 import com.company.Operadora.Cliente;
 
-import java.util.ArrayList;
-import java.util.Formatter;
-import java.util.Scanner;
+import java.util.*;
 
 public class DataAccessObject extends Arquivo implements DAOInferface{
     private ArrayList<Cliente> clientes;
@@ -57,6 +55,32 @@ public class DataAccessObject extends Arquivo implements DAOInferface{
         msg += "------------------------------";
 
         return msg;
+    }
+
+    private String listar(List clientes) {
+        String msg = "";
+        msg += "------------------------------\n";
+
+        if (msg.isEmpty()) {
+            msg = "Sem Clientes";
+        }
+        for(Object cliente:clientes){
+            msg += cliente + "\n";
+        }
+
+        msg += "------------------------------";
+
+        return msg;
+    }
+
+    public String listarPorCredito(){
+        List<Cliente> clientesOrdenados = new ArrayList<>();
+        this.clientes.sort((o1, o2) -> {
+            if (o2.getCreditos() <= o1.getCreditos()) return -1;
+            else return 1;
+        });
+        clientesOrdenados = this.clientes;
+        return listar(clientesOrdenados);
     }
 
     private void salvar(){
