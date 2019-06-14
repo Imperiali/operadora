@@ -4,13 +4,26 @@ public class Cliente {
     private String nome;
     private int numero;
     private String plano;
-    private int credito;
+    private float creditos;
 
-    public Cliente(String nome, int numero, String plano, int credito) {
+    public Cliente() {
+    }
+
+    public Cliente(String nome, int numero, String plano, float creditos) {
         this.nome = nome;
         this.numero = numero;
         this.plano = plano;
-        this.credito = credito;
+        this.creditos = creditos;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", numero=" + numero +
+                ", plano='" + plano + '\'' +
+                ", creditos=" + creditos +
+                '}';
     }
 
     //region Getters and Setters
@@ -39,12 +52,12 @@ public class Cliente {
         this.plano = plano;
     }
 
-    public int getCredito() {
-        return credito;
+    public float getCreditos() {
+        return creditos;
     }
 
-    public void setCredito(int credito) {
-        this.credito = credito;
+    public void setCreditos(float creditos) {
+        this.creditos = creditos;
     }
 
     //endregion
