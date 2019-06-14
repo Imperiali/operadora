@@ -1,6 +1,6 @@
 package com.company.Operadora;
 
-public class Cliente {
+public class Cliente implements Comparable{
     private String nome;
     private int numero;
     private String plano;
@@ -24,6 +24,13 @@ public class Cliente {
                 ", plano='" + plano + '\'' +
                 ", creditos=" + creditos +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        float compareage=((Cliente) o).getCreditos();
+        /* For Ascending order*/
+        return (int) creditos - (int) compareage;
     }
 
     //region Getters and Setters
