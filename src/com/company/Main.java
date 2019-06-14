@@ -29,6 +29,7 @@ public class Main {
     }
 
     public static void relatorio(DataAccessObject dao){
+        DataAccessObject daoLigacoes = new DataAccessObject("clientes.txt", "ligacoes.txt");
         final int FIM = 0;
         int opcao;
 
@@ -37,17 +38,21 @@ public class Main {
             switch (opcao) {
                 case 1: listarClientes(dao);
                     break;
-                case 2: // TODO clientes com número de créditos igual ou menor a zero, listarClientes(dao, 0);
+                case 2: listarClientesSemCredito(dao);
                     break;
-                case 3: // TODO listar os clientes que tem crédito acima de um determinado valor, listarClientes(dao, leCredito());
+                case 3: listarClientesComMaisDe(dao, leCredito());
                     break;
-                case 4: // TODO listar a conta com o maior número de crédito. listarClienteTop(dao);
+                case 4: listarClienteTop(dao);
                     break;
-                case 5: // gerarBoleto(dao);
+                case 5: gerarBoleto(daoLigacoes);
                     break;
             }
-            opcao = menu();
+            opcao = relatorioMenu();
         }
+    }
+
+    public static void gerarBoleto(DataAccessObject daoLigacoes){
+        System.out.println(daoLigacoes.geraBoleto());
     }
 
     public static int relatorioMenu(){
@@ -62,20 +67,27 @@ public class Main {
             System.out.println("[5] - Gerar boletos");
             System.out.println("[0] - Sair");
             opcao = leNumero("Entre com uma opção: ");
-            if ((opcao < 0) || (opcao > 4)) {
+            if ((opcao < 0) || (opcao > 5)) {
                 System.out.println("Erro: Opcao inválida");
             }
-        } while ((opcao < 0) || (opcao > 4));
+        } while ((opcao < 0) || (opcao > 5));
 
         return opcao;
     }
 
-    public static void listarClientes(DataAccessObject dao, float credito){
-        System.out.println(dao.listar());
+    public static void listarClienteTop(DataAccessObject dao){
+        System.out.println(dao.mostrarClietneTop());
+    }
+    public static void listarClientesComMaisDe(DataAccessObject dao, float credito){
+        System.out.println(dao.listarPorCreditoAcimaDe(credito));
+    }
+
+    public static void listarClientesSemCredito(DataAccessObject dao){
+        System.out.println(dao.listarSemCredito());
     }
 
     public static void listarClientes(DataAccessObject dao){
-        System.out.println(dao.listar());
+        System.out.println(dao.mostrar());
     }
 
     public static void adicionarCliente(DataAccessObject dao){
