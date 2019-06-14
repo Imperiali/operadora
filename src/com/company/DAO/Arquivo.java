@@ -1,14 +1,16 @@
 package com.company.DAO;
 
 import com.company.Operadora.Cliente;
+import com.company.Operadora.Ligacao;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Scanner;
 
-public abstract class Arquivo {
+public class Arquivo {
   private String nomeArq;
 
   public Arquivo(String nomeArq) {
@@ -38,7 +40,25 @@ public abstract class Arquivo {
     }
   }
 
-  public void leArquivo(Scanner entrada, ArrayList<Cliente> clientes){
+  public void leArquivoLigacao(Scanner entrada, ArrayList<Ligacao> ligacoes){
+    String linha;
+    String[] campos;
+
+    try {
+      while (entrada.hasNext()){
+        linha = entrada.nextLine();
+        campos = linha.split(";");
+        Ligacao ligacao = new Ligacao(Integer.parseInt(campos[0]),
+                                      Time.valueOf(campos[1]),
+                                      Time.valueOf(campos[2]));
+        ligacoes.add(ligacao);
+      }
+    }catch (Exception e){
+      System.out.println("Erro: " + e);
+    }
+  }
+
+  public void leArquivoCliente(Scanner entrada, ArrayList<Cliente> clientes){
     String linha;
     String[] campos;
 
