@@ -1,2 +1,5 @@
-Igor;123456789;pre-pago;25
-Laura;987654321;pos-pago;50
+Yasmin;54544545;Pós-pago;0.0
+Renata;45455454;Pré-pago;10.0
+Igor;123456789;Pré-pago;25.0
+Laura;987654321;Pós-pago;50.0
+Ray;58588585;Pré-pago;0.0
