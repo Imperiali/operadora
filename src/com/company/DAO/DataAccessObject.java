@@ -1,21 +1,54 @@
 package com.company.DAO;
 
 import com.company.Operadora.Cliente;
+import com.company.Operadora.Ligacao;
+import com.company.Operadora.Operadora;
 
 import java.util.*;
 
-public class DataAccessObject extends Arquivo implements DAOInferface{
+public class DataAccessObject implements DAOInferface{
+
     private ArrayList<Cliente> clientes;
+    private ArrayList<Ligacao> ligacoes;
+    private Arquivo cliente;
+    private Operadora operadora;
 
     public DataAccessObject(String nomeArq) {
-        super(nomeArq);
+        cliente = new Arquivo(nomeArq);
         clientes = new ArrayList<>();
-        Scanner entrada = abreArquivo();
+        operadora = new Operadora(clientes);
+        Scanner entrada = cliente.abreArquivo();
         if (entrada != null){
-            leArquivo(entrada, clientes);
-            fechaArquivo(entrada);
+            cliente.leArquivoCliente(entrada, clientes);
+            cliente.fechaArquivo(entrada);
         }
     }
+
+    public DataAccessObject(String nomeArq, String nomeArq2) {
+        cliente = new Arquivo(nomeArq);
+        this.clientes = new ArrayList<Cliente>();
+        Arquivo ligacoes = new Arquivo(nomeArq2);
+        this.ligacoes = new ArrayList<Ligacao>();
+
+        Scanner entradaCliente = cliente.abreArquivo();
+        if (entradaCliente != null){
+            cliente.leArquivoCliente(entradaCliente, this.clientes);
+            cliente.fechaArquivo(entradaCliente);
+        }
+
+        Scanner entradaLigacao = ligacoes.abreArquivo();
+        if (entradaLigacao != null){
+            ligacoes.leArquivoLigacao(entradaLigacao, this.ligacoes);
+            ligacoes.fechaArquivo(entradaLigacao);
+        }
+        operadora = new Operadora(this.clientes, this.ligacoes);
+    }
+
+    public String geraBoleto(){
+        return operadora.listarLigacoes();
+    }
+
+    //region Metodos Interface
 
     @Override
     public void adicionar(Cliente cliente) {
@@ -41,65 +74,52 @@ public class DataAccessObject extends Arquivo implements DAOInferface{
     }
 
     @Override
-    public String listar() {
+    public String mostrar() {
         String msg = "";
         msg += "------------------------------\n";
 
-        if (msg.isEmpty()) {
-            msg = "Sem Clientes";
-        }
         for(Cliente cliente:this.clientes){
             msg += cliente + "\n";
         }
 
-        msg += "------------------------------";
-
-        return msg;
-    }
-
-    private String listar(List clientes) {
-        String msg = "";
-        msg += "------------------------------\n";
-
         if (msg.isEmpty()) {
             msg = "Sem Clientes";
         }
-        for(Object cliente:clientes){
-            msg += cliente + "\n";
-        }
 
         msg += "------------------------------";
 
         return msg;
     }
 
-    public String listarPorCredito(){
-        List<Cliente> clientesOrdenados = new ArrayList<>();
-        this.clientes.sort((o1, o2) -> {
-            if (o2.getCreditos() <= o1.getCreditos()) return -1;
-            else return 1;
-        });
-        clientesOrdenados = this.clientes;
-        return listar(clientesOrdenados);
+    @Override
+    public ArrayList<Object> listarTodos() {
+        return null;
     }
 
-    private void salvar(){
-        Formatter saida = abreArquivoGravar();
-        if (saida != null){
-            gravaArquivo(saida, clientes);
-            fechaArquivo(saida);
-        }
+    // endregion
+
+    public String mostrarClietneTop() {
+        return operadora.mostrarClietneTop();
+    }
+
+    public String listarPorCreditoAcimaDe(float credito) {
+        return operadora.listarPorCreditoAcimaDe(credito);
+    }
+
+    public String listarSemCredito() {
+        return operadora.listarSemCredito();
     }
 
     public int pesquisaCliente(int num){
-        int pos = -1;
-        for (int i = 0; i < clientes.size(); i++){
-            if(clientes.get(i).getNumero() == num){
-                pos = i;
-                break;
-            }
+        return operadora.pesquisaCliente(num);
+    }
+
+    private void salvar(){
+        Formatter saida = cliente.abreArquivoGravar();
+        if (saida != null){
+            cliente.gravaArquivo(saida, clientes);
+            cliente.fechaArquivo(saida);
         }
-        return pos;
     }
 
     //    region Getters and Setters
