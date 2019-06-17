@@ -1,13 +1,14 @@
 package com.company.Operadora;
 
 import java.sql.Time;
+import java.time.LocalTime;
 
 public class Ligacao {
   private int numero;
-  private Time inicio;
-  private Time fim;
+  private LocalTime inicio;
+  private LocalTime fim;
 
-  public Ligacao(int numero, Time inicio, Time fim) {
+  public Ligacao(int numero, LocalTime inicio, LocalTime fim) {
     this.numero = numero;
     this.inicio = inicio;
     this.fim = fim;
@@ -32,19 +33,19 @@ public class Ligacao {
     this.numero = numero;
   }
 
-  public Time getInicio() {
+  public LocalTime getInicio() {
     return inicio;
   }
 
-  public void setInicio(Time inicio) {
+  public void setInicio(LocalTime inicio) {
     this.inicio = inicio;
   }
 
-  public Time getFim() {
+  public LocalTime getFim() {
     return fim;
   }
 
-  public void setFim(Time fim) {
+  public void setFim(LocalTime fim) {
     this.fim = fim;
   }
 
