@@ -1,5 +1,6 @@
 package com.company.Operadora;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -14,6 +15,20 @@ public class Operadora {
   public Operadora(ArrayList<Cliente> clientes, ArrayList<Ligacao> ligacoes) {
     this.clientes = clientes;
     this.ligacoes = ligacoes;
+  }
+
+  public String analisarCusto(Cliente cliente){
+    int hora = 0;
+    int minuto = 0;
+
+    for(Ligacao ligacao:ligacoes){
+      if(cliente.getNumero() == ligacao.getNumero()){
+        hora += ligacao.getInicio().getHour() - ligacao.getFim().getHour();
+        minuto += ligacao.getInicio().getMinute() - ligacao.getFim().getMinute();
+      }
+    }
+
+    return (hora * -1) + ":" + (minuto * -1);
   }
 
   public String listarLigacoes() {
