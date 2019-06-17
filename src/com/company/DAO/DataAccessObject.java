@@ -44,8 +44,8 @@ public class DataAccessObject implements DAOInferface{
         operadora = new Operadora(this.clientes, this.ligacoes);
     }
 
-    public String geraBoleto(){
-        return operadora.listarLigacoes();
+    public String geraBoleto(int num){
+        return operadora.analisarCusto(clientes.get(num));
     }
 
     //region Metodos Interface
