@@ -52,7 +52,7 @@ public class Main {
     }
 
     public static void gerarBoleto(DataAccessObject daoLigacoes){
-        System.out.println(daoLigacoes.geraBoleto());
+        System.out.println(daoLigacoes.geraBoleto(daoLigacoes.pesquisaCliente(leNumero("Digite o numero"))));
     }
 
     public static int relatorioMenu(){
