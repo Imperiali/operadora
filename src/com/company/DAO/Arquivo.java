@@ -6,9 +6,9 @@ import com.company.Operadora.Ligacao;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Formatter;
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.*;
 
 public class Arquivo {
   private String nomeArq;
@@ -49,8 +49,12 @@ public class Arquivo {
         linha = entrada.nextLine();
         campos = linha.split(";");
         Ligacao ligacao = new Ligacao(Integer.parseInt(campos[0]),
-                                      Time.valueOf(campos[1]),
-                                      Time.valueOf(campos[2]));
+                                      LocalTime.of(Integer.parseInt(campos[1].split(":")[0]),
+                                              Integer.parseInt(campos[1].split(":")[1]),
+                                              Integer.parseInt(campos[1].split(":")[2]) ),
+                                      LocalTime.of(Integer.parseInt(campos[2].split(":")[0]),
+                                              Integer.parseInt(campos[2].split(":")[1]),
+                                              Integer.parseInt(campos[2].split(":")[2])));
         ligacoes.add(ligacao);
       }
     }catch (Exception e){
