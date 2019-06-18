@@ -9,5 +9,4 @@ public interface DAOInferface {
     boolean remover(int num);
     void alterar(int indice, Cliente cliente);
     String mostrar();
-    ArrayList<Object> listarTodos();
 }

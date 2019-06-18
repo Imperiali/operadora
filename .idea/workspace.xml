@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="118c2797-17e9-4da6-83c8-5d6ea8f4f766" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/DAO/Arquivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DAO/Arquivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Operadora/Operadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Operadora/Operadora.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,8 +26,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="54" selection-start-line="54" selection-end-line="54" />
+                <state relative-caret-position="408">
+                  <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+                  <folding>
+                    <element signature="method#relatorioMenu#0;class#Main#0" />
+                    <element signature="e#2518#2519#0" expanded="true" />
+                    <element signature="e#2577#2578#0" expanded="true" />
+                    <element signature="method#adicionarCliente#0;class#Main#0" />
+                    <element signature="method#alterarCliente#0;class#Main#0" />
+                    <element signature="method#deletarCliente#0;class#Main#0" />
+                    <element signature="method#lerClienteSemNumero#0;class#Main#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -36,17 +44,18 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="219">
-                  <caret line="47" selection-start-line="47" selection-end-line="47" />
+                <state relative-caret-position="199">
+                  <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
                   <folding>
-                    <element signature="e#1606#1607#0" expanded="true" />
-                    <element signature="e#1590#1616#0" />
-                    <element signature="method#adicionar#0;class#DataAccessObject#0" />
+                    <element signature="method#DataAccessObject#0;class#DataAccessObject#0" />
+                    <element signature="method#DataAccessObject#1;class#DataAccessObject#0" />
                     <element signature="method#remover#0;class#DataAccessObject#0" />
-                    <element signature="method#alterar#0;class#DataAccessObject#0" />
-                    <element signature="method#mostrar#0;class#DataAccessObject#0" />
-                    <element signature="method#salvar#0;class#DataAccessObject#0" />
-                    <element signature="e#3207#3239#0" />
+                    <element signature="e#2834#2835#0" expanded="true" />
+                    <element signature="e#2869#2870#0" expanded="true" />
+                    <element signature="e#2932#2933#0" expanded="true" />
+                    <element signature="e#2984#2985#0" expanded="true" />
+                    <element signature="e#3242#3243#0" expanded="true" />
+                    <element signature="e#3295#3296#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -56,7 +65,7 @@
             <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="170">
-                  <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+                  <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -67,24 +76,18 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Operadora.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+                <state relative-caret-position="199">
+                  <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#mostrarClietneTop#0;class#Operadora#0" />
                     <element signature="method#listarPorCreditoAcimaDe#0;class#Operadora#0" />
                     <element signature="method#listarSemCredito#0;class#Operadora#0" />
                     <element signature="method#ordenarPorCredito#0;class#Operadora#0" />
-                    <element signature="method#pesquisaCliente#0;class#Operadora#0" />
-                    <element signature="e#2344#2372#0" />
-                    <element signature="e#2786#2787#0" expanded="true" />
-                    <element signature="e#2811#2812#0" expanded="true" />
-                    <element signature="e#2869#2870#0" expanded="true" />
-                    <element signature="e#2903#2904#0" expanded="true" />
-                    <element signature="e#2948#2949#0" expanded="true" />
-                    <element signature="e#2973#2974#0" expanded="true" />
-                    <element signature="e#3031#3032#0" expanded="true" />
-                    <element signature="e#3065#3066#0" expanded="true" />
+                    <element signature="e#2883#2884#0" expanded="true" />
+                    <element signature="e#2975#2976#0" expanded="true" />
+                    <element signature="e#3045#3046#0" expanded="true" />
+                    <element signature="e#3137#3138#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -93,18 +96,12 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+                <state relative-caret-position="136">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#720#721#0" expanded="true" />
-                    <element signature="e#743#744#0" expanded="true" />
-                    <element signature="e#783#784#0" expanded="true" />
-                    <element signature="e#813#814#0" expanded="true" />
+                    <element signature="e#819#820#0" expanded="true" />
                     <element signature="e#839#840#0" expanded="true" />
-                    <element signature="e#859#860#0" expanded="true" />
-                    <element signature="e#893#894#0" expanded="true" />
-                    <element signature="e#917#918#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -113,7 +110,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Cliente.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="918">
+                <state relative-caret-position="794">
                   <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
                 </state>
               </provider>
@@ -122,8 +119,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/company/DAO/Arquivo.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="316">
-                  <caret line="56" column="90" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
+                <state relative-caret-position="187">
+                  <caret line="30" selection-start-line="30" selection-end-line="30" />
                 </state>
               </provider>
             </entry>
@@ -159,10 +156,14 @@
     <findStrings>
       <find>leArquivo</find>
       <find>pesquisaCliente</find>
+      <find>salvar</find>
+      <find>geraBoleto</find>
     </findStrings>
     <replaceStrings>
       <replace>leArquivoCliente</replace>
       <replace />
+      <replace>salvarCliente</replace>
+      <replace>gerarCobranca</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -177,13 +178,13 @@
         <option value="$PROJECT_DIR$/src/com/company/DAO/DataAccessObjetct.java" />
         <option value="$PROJECT_DIR$/src/com/company/Operadora/Cliente.java" />
         <option value="$PROJECT_DIR$/clientes.txt" />
-        <option value="$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java" />
         <option value="$PROJECT_DIR$/ligacoes.txt" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" />
         <option value="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" />
         <option value="$PROJECT_DIR$/src/com/company/DAO/Arquivo.java" />
         <option value="$PROJECT_DIR$/src/com/company/Operadora/Operadora.java" />
+        <option value="$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java" />
+        <option value="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -199,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,6 +236,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -289,7 +290,9 @@
       <workItem from="1560507522435" duration="35000" />
       <workItem from="1560507595610" duration="7699000" />
       <workItem from="1560767311294" duration="33000" />
-      <workItem from="1560770213426" duration="3711000" />
+      <workItem from="1560770213426" duration="3881000" />
+      <workItem from="1560852919688" duration="149000" />
+      <workItem from="1560853853937" duration="2046000" />
     </task>
     <task id="LOCAL-00001" summary="Interface para metodos de acesso aos dados">
       <created>1560111175274</created>
@@ -396,17 +399,52 @@
       <option name="project" value="LOCAL" />
       <updated>1560515675748</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Alterando Arquivo&#10;&#10;Mudando Time para LocalTime">
+      <created>1560773994285</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560773994285</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Alterando DAO&#10;&#10;Mudando Time para LocalTime">
+      <created>1560774030386</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560774030386</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Alterando Ligacao&#10;&#10;Mudando Time para LocalTime">
+      <created>1560774042978</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1560774042978</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Alterando Operadora&#10;&#10;Mudando Time para LocalTime">
+      <created>1560774079256</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1560774079256</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Alterando Main&#10;&#10;Mudando Time para LocalTime">
+      <created>1560774091720</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1560774091720</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15587000" />
+    <option name="totallyTimeSpent" value="17952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15938166" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16257995" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -415,7 +453,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39869988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30010834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -487,7 +525,12 @@
     <MESSAGE value="Atualizando inteface DAO" />
     <MESSAGE value="Lendo arquivos de ligacoes" />
     <MESSAGE value="Listagens funcionando&#10;&#10;Comecando geracao de boletos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Listagens funcionando&#10;&#10;Comecando geracao de boletos" />
+    <MESSAGE value="Alterando Arquivo&#10;&#10;Mudando Time para LocalTime" />
+    <MESSAGE value="Alterando DAO&#10;&#10;Mudando Time para LocalTime" />
+    <MESSAGE value="Alterando Ligacao&#10;&#10;Mudando Time para LocalTime" />
+    <MESSAGE value="Alterando Operadora&#10;&#10;Mudando Time para LocalTime" />
+    <MESSAGE value="Alterando Main&#10;&#10;Mudando Time para LocalTime" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterando Main&#10;&#10;Mudando Time para LocalTime" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -520,20 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java">
+    <entry file="file://$PROJECT_DIR$/ligacoes.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+        <state relative-caret-position="221">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -547,83 +580,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ligacoes.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        <state relative-caret-position="794">
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="136">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#1606#1607#0" expanded="true" />
-            <element signature="e#1590#1616#0" />
-            <element signature="method#adicionar#0;class#DataAccessObject#0" />
-            <element signature="method#remover#0;class#DataAccessObject#0" />
-            <element signature="method#alterar#0;class#DataAccessObject#0" />
-            <element signature="method#mostrar#0;class#DataAccessObject#0" />
-            <element signature="method#salvar#0;class#DataAccessObject#0" />
-            <element signature="e#3207#3239#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/DAO/Arquivo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="56" column="90" selection-start-line="56" selection-start-column="90" selection-end-line="56" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#917#918#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Operadora.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="199">
+          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#mostrarClietneTop#0;class#Operadora#0" />
             <element signature="method#listarPorCreditoAcimaDe#0;class#Operadora#0" />
             <element signature="method#listarSemCredito#0;class#Operadora#0" />
             <element signature="method#ordenarPorCredito#0;class#Operadora#0" />
-            <element signature="method#pesquisaCliente#0;class#Operadora#0" />
-            <element signature="e#2344#2372#0" />
-            <element signature="e#2786#2787#0" expanded="true" />
-            <element signature="e#2811#2812#0" expanded="true" />
+            <element signature="e#2883#2884#0" expanded="true" />
+            <element signature="e#2975#2976#0" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="true" />
+            <element signature="e#3137#3138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+          <folding>
+            <element signature="method#DataAccessObject#0;class#DataAccessObject#0" />
+            <element signature="method#DataAccessObject#1;class#DataAccessObject#0" />
+            <element signature="method#remover#0;class#DataAccessObject#0" />
+            <element signature="e#2834#2835#0" expanded="true" />
             <element signature="e#2869#2870#0" expanded="true" />
-            <element signature="e#2903#2904#0" expanded="true" />
-            <element signature="e#2948#2949#0" expanded="true" />
-            <element signature="e#2973#2974#0" expanded="true" />
-            <element signature="e#3031#3032#0" expanded="true" />
-            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#2932#2933#0" expanded="true" />
+            <element signature="e#2984#2985#0" expanded="true" />
+            <element signature="e#3242#3243#0" expanded="true" />
+            <element signature="e#3295#3296#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="408">
+          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+          <folding>
+            <element signature="method#relatorioMenu#0;class#Main#0" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#2577#2578#0" expanded="true" />
+            <element signature="method#adicionarCliente#0;class#Main#0" />
+            <element signature="method#alterarCliente#0;class#Main#0" />
+            <element signature="method#deletarCliente#0;class#Main#0" />
+            <element signature="method#lerClienteSemNumero#0;class#Main#0" />
+          </folding>
         </state>
       </provider>
     </entry>
