@@ -17,7 +17,7 @@ public class Operadora {
     this.ligacoes = ligacoes;
   }
 
-  public String analisarCusto(Cliente cliente){
+  public int analisarCusto(Cliente cliente){
     int hora = 0;
     int minuto = 0;
 
@@ -28,7 +28,10 @@ public class Operadora {
       }
     }
 
-    return (hora * -1) + ":" + (minuto * -1);
+    minuto += (hora * 60);
+    minuto *= -1;
+
+    return minuto;
   }
 
   public String listarLigacoes() {
