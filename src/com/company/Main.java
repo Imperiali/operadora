@@ -44,15 +44,30 @@ public class Main {
                     break;
                 case 4: listarClienteTop(dao);
                     break;
-                case 5: gerarBoleto(daoLigacoes);
+                case 5: gerarBoleto(daoLigacoes, dao);
                     break;
             }
             opcao = relatorioMenu();
         }
     }
 
-    public static void gerarBoleto(DataAccessObject daoLigacoes){
-        System.out.println(daoLigacoes.geraBoleto(daoLigacoes.pesquisaCliente(leNumero("Digite o numero"))));
+    public static void gerarBoleto(DataAccessObject daoLigacoes, DataAccessObject daoClientes){
+        listarClientes(daoClientes);
+        Cliente cliente = daoClientes.retornaCliente(daoLigacoes.pesquisaCliente(leNumero("Digite o numero")));
+        int minuto = daoLigacoes.gerarCobranca(cliente.getNumero());
+
+        String cobranca = "Minutos: " + minuto + "\n";
+
+        switch (cliente.getPlano()){
+            case "Pré-pago":
+                cliente.setCreditos(cliente.getCreditos() - minuto);
+                cobranca += cliente.getNome() + " | R$" + minuto + ",00 | Creditos restantes: " +  cliente.getCreditos();
+                break;
+            case "Pós-pago":
+                cobranca += cliente.getNome() + " deverá pagar o valor de R$" + minuto + ",00";
+                break;
+        }
+        System.out.println(cobranca);
     }
 
     public static int relatorioMenu(){
