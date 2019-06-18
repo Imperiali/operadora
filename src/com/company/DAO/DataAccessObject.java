@@ -44,8 +44,15 @@ public class DataAccessObject implements DAOInferface{
         operadora = new Operadora(this.clientes, this.ligacoes);
     }
 
-    public String geraBoleto(int num){
-        return operadora.analisarCusto(clientes.get(num));
+    public int gerarCobranca(int num){
+        Cliente cliente = clientes.get(pesquisaCliente(num));
+        int creditosUsados = operadora.analisarCusto(cliente);
+        int clienteIndice = pesquisaCliente(cliente.getNumero());
+        cliente.setCreditos(cliente.getCreditos() - creditosUsados);
+        alterar(clienteIndice, cliente);
+        salvar();
+
+        return creditosUsados;
     }
 
     //region Metodos Interface
@@ -91,9 +98,8 @@ public class DataAccessObject implements DAOInferface{
         return msg;
     }
 
-    @Override
-    public ArrayList<Object> listarTodos() {
-        return null;
+    public Cliente retornaCliente(int indice){
+        return this.clientes.get(indice);
     }
 
     // endregion
