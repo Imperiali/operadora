@@ -8,67 +8,59 @@ import java.util.*;
 
 public class DataAccessObject implements DAOInferface{
 
-    private ArrayList<Cliente> clientes;
-    private ArrayList<Ligacao> ligacoes;
     private Arquivo cliente;
     private Operadora operadora;
 
     public DataAccessObject(String nomeArq) {
         cliente = new Arquivo(nomeArq);
-        clientes = new ArrayList<>();
-        operadora = new Operadora(clientes);
+        operadora = new Operadora();
         Scanner entrada = cliente.abreArquivo();
         if (entrada != null){
-            cliente.leArquivoCliente(entrada, clientes);
+            cliente.leArquivoCliente(entrada, operadora.getClientes());
             cliente.fechaArquivo(entrada);
         }
     }
 
     public DataAccessObject(String nomeArq, String nomeArq2) {
         cliente = new Arquivo(nomeArq);
-        this.clientes = new ArrayList<Cliente>();
+        operadora = new Operadora();
         Arquivo ligacoes = new Arquivo(nomeArq2);
-        this.ligacoes = new ArrayList<Ligacao>();
-
         Scanner entradaCliente = cliente.abreArquivo();
+
         if (entradaCliente != null){
-            cliente.leArquivoCliente(entradaCliente, this.clientes);
+            cliente.leArquivoCliente(entradaCliente, operadora.getClientes());
             cliente.fechaArquivo(entradaCliente);
         }
 
         Scanner entradaLigacao = ligacoes.abreArquivo();
         if (entradaLigacao != null){
-            ligacoes.leArquivoLigacao(entradaLigacao, this.ligacoes);
+            ligacoes.leArquivoLigacao(entradaLigacao, operadora.getLigacoes());
             ligacoes.fechaArquivo(entradaLigacao);
         }
-        operadora = new Operadora(this.clientes, this.ligacoes);
     }
 
-    public int gerarCobranca(int num){
-        Cliente cliente = clientes.get(pesquisaCliente(num));
-        int creditosUsados = operadora.analisarCusto(cliente);
-        int clienteIndice = pesquisaCliente(cliente.getNumero());
-        cliente.setCreditos(cliente.getCreditos() - creditosUsados);
-        alterar(clienteIndice, cliente);
+    public String gerarCobranca(int num){
+        Cliente cliente = operadora.getClientes().get(pesquisaCliente(num));
+        String msg = operadora.fazCobranca(cliente);
         salvar();
 
-        return creditosUsados;
+        return msg;
     }
 
     //region Metodos Interface
 
     @Override
     public void adicionar(Cliente cliente) {
-        clientes.add(cliente);
+        operadora.addCliente(cliente);
         salvar();
     }
 
     @Override
     public boolean remover(int indice) {
-        if (clientes.isEmpty() || indice < 0) {
+        if (operadora.getClientes().isEmpty() || indice < 0) {
             return false;
         } else {
-            clientes.remove(indice);
+            operadora.removeCliente(indice);
             salvar();
             return true;
         }
@@ -76,7 +68,7 @@ public class DataAccessObject implements DAOInferface{
 
     @Override
     public void alterar(int indice, Cliente cliente) {
-        clientes.set(indice, cliente);
+        operadora.updateCliente(indice, cliente);
         salvar();
     }
 
@@ -85,12 +77,12 @@ public class DataAccessObject implements DAOInferface{
         String msg = "";
         msg += "------------------------------\n";
 
-        for(Cliente cliente:this.clientes){
-            msg += cliente + "\n";
-        }
-
-        if (msg.isEmpty()) {
-            msg = "Sem Clientes";
+        if(operadora.getClientes().isEmpty()){
+            msg += "Sem Clientes";
+        }else {
+            for(Cliente cliente:operadora.getClientes()){
+                msg += cliente + "\n";
+            }
         }
 
         msg += "------------------------------";
@@ -99,13 +91,13 @@ public class DataAccessObject implements DAOInferface{
     }
 
     public Cliente retornaCliente(int indice){
-        return this.clientes.get(indice);
+        return operadora.getClientes().get(indice);
     }
 
     // endregion
 
-    public String mostrarClietneTop() {
-        return operadora.mostrarClietneTop();
+    public String mostrarClienteTop() {
+        return operadora.mostrarClienteTop();
     }
 
     public String listarPorCreditoAcimaDe(float credito) {
@@ -123,20 +115,9 @@ public class DataAccessObject implements DAOInferface{
     private void salvar(){
         Formatter saida = cliente.abreArquivoGravar();
         if (saida != null){
-            cliente.gravaArquivo(saida, clientes);
+            cliente.gravaArquivo(saida, operadora.getClientes());
             cliente.fechaArquivo(saida);
         }
     }
 
-    //    region Getters and Setters
-
-    public ArrayList<Cliente> getClientes() {
-        return clientes;
-    }
-
-    public void setClientes(ArrayList<Cliente> clientes) {
-        this.clientes = clientes;
-    }
-
-    //    endregion
 }
