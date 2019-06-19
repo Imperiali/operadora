@@ -4,9 +4,7 @@
     <list default="true" id="118c2797-17e9-4da6-83c8-5d6ea8f4f766" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Operadora/Operadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Operadora/Operadora.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,15 +20,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state>
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding>
-                <element signature="method#relatorio#0;class#Main#0" />
                 <element signature="method#relatorioMenu#0;class#Main#0" />
                 <element signature="method#listarClientesComMaisDe#0;class#Main#0" />
+                <element signature="e#3602#3603#0" expanded="true" />
+                <element signature="e#3651#3652#0" expanded="true" />
                 <element signature="method#adicionarCliente#0;class#Main#0" />
                 <element signature="method#alterarCliente#0;class#Main#0" />
                 <element signature="method#deletarCliente#0;class#Main#0" />
@@ -47,18 +46,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="method#DataAccessObject#0;class#DataAccessObject#0" />
                 <element signature="e#1905#1931#0" />
                 <element signature="method#adicionar#0;class#DataAccessObject#0" />
                 <element signature="method#remover#0;class#DataAccessObject#0" />
                 <element signature="method#alterar#0;class#DataAccessObject#0" />
-                <element signature="method#mostrar#0;class#DataAccessObject#0" />
                 <element signature="e#2650#2651#0" expanded="true" />
                 <element signature="e#2702#2703#0" expanded="true" />
                 <element signature="e#2779#2780#0" expanded="true" />
@@ -87,29 +85,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Operadora.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="350">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#432#457#0" />
                 <element signature="e#502#503#0" expanded="true" />
                 <element signature="e#538#539#0" expanded="true" />
                 <element signature="e#580#581#0" expanded="true" />
                 <element signature="e#618#619#0" expanded="true" />
                 <element signature="e#679#680#0" expanded="true" />
                 <element signature="e#726#727#0" expanded="true" />
-                <element signature="method#fazCobranca#0;class#Operadora#0" />
-                <element signature="method#analisarCusto#0;class#Operadora#0" />
                 <element signature="method#mostrarClietneTop#0;class#Operadora#0" />
                 <element signature="method#listarPorCreditoAcimaDe#0;class#Operadora#0" />
                 <element signature="method#listarSemCredito#0;class#Operadora#0" />
                 <element signature="method#ordenarPorCredito#0;class#Operadora#0" />
                 <element signature="method#pesquisaCliente#0;class#Operadora#0" />
                 <element signature="e#2782#2810#0" />
-                <element signature="e#3536#3537#0" expanded="true" />
-                <element signature="e#3628#3629#0" expanded="true" />
-                <element signature="e#3698#3699#0" expanded="true" />
-                <element signature="e#3790#3791#0" expanded="true" />
+                <element signature="e#3568#3569#0" expanded="true" />
+                <element signature="e#3660#3661#0" expanded="true" />
+                <element signature="e#3730#3731#0" expanded="true" />
+                <element signature="e#3822#3823#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,12 +128,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="168">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="method#Cliente#0;class#Cliente#0" />
                 <element signature="method#compareTo#0;class#Cliente#0" />
-                <element signature="e#879#907#0" />
+                <element signature="e#1095#1096#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -202,11 +197,11 @@
         <option value="$PROJECT_DIR$/ligacoes.txt" />
         <option value="$PROJECT_DIR$/src/com/company/DAO/Arquivo.java" />
         <option value="$PROJECT_DIR$/src/com/company/DAO/DAOInferface.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/clientes.txt" />
+        <option value="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" />
         <option value="$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java" />
         <option value="$PROJECT_DIR$/src/com/company/Operadora/Operadora.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Operadora/Ligacao.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -267,7 +262,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560112302939" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/igor_imperiali_DR1_AT.zip" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -316,7 +311,7 @@
       <workItem from="1560770213426" duration="3881000" />
       <workItem from="1560852919688" duration="149000" />
       <workItem from="1560853853937" duration="2737000" />
-      <workItem from="1560938946156" duration="4698000" />
+      <workItem from="1560938946156" duration="7812000" />
     </task>
     <task id="LOCAL-00001" summary="Interface para metodos de acesso aos dados">
       <created>1560111175274</created>
@@ -486,15 +481,42 @@
       <option name="project" value="LOCAL" />
       <updated>1560856281409</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Alterando classe DAO&#10;&#10;Removendo lista dos clisntes e das ligacoes&#10;Dando responsabilidades deles para operadora&#10;Removendo regras de cobrança&#10;Corrigindo listas">
+      <created>1560943752970</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1560943752970</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Alterando classe Ligacao&#10;&#10;Remonvendo importe do time">
+      <created>1560943784453</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1560943784453</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Alterando classe Operadora&#10;&#10;Remonvendo importe do time&#10;Instanciando as listas nos contrutores&#10;Delegando responsabilidade dos clientes e ligações&#10;Declarando metodos para manipulação de clientes&#10;Corrigindo listagens">
+      <created>1560943860986</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1560943860986</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Alterando classe Main&#10;&#10;Gerar boleto com menos regras">
+      <created>1560943891560</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1560943891560</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23341000" />
+    <option name="totallyTimeSpent" value="26455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1641791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -505,7 +527,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30010834" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4496208" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -562,9 +584,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Interface para metodos de acesso aos dados" />
-    <MESSAGE value="Classe DAO para acesso aos dados" />
-    <MESSAGE value="Classe modelo Cliente" />
     <MESSAGE value="Classe Operadora&#10;Sem certeza se sera util ou nao" />
     <MESSAGE value="Classe Plano&#10;Sem certeza se sera util ou nao" />
     <MESSAGE value="Lista inicial de clientes" />
@@ -586,7 +605,35 @@
     <MESSAGE value="Alterando classe DAO&#10;&#10;Alternado metodo gerarCobranca&#10;Adiconando metodo de recuperar cliente" />
     <MESSAGE value="Alterando classe Operadora&#10;&#10;Alternado metodo analisarCusto" />
     <MESSAGE value="Alterando classe Main&#10;&#10;Alternado metodo gerarBoleto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterando classe Main&#10;&#10;Alternado metodo gerarBoleto" />
+    <MESSAGE value="Alterando classe DAO&#10;&#10;Removendo lista dos clisntes e das ligacoes&#10;Dando responsabilidades deles para operadora&#10;Removendo regras de cobrança&#10;Corrigindo listas" />
+    <MESSAGE value="Alterando classe Ligacao&#10;&#10;Remonvendo importe do time" />
+    <MESSAGE value="Alterando classe Operadora&#10;&#10;Remonvendo importe do time&#10;Instanciando as listas nos contrutores&#10;Delegando responsabilidade dos clientes e ligações&#10;Declarando metodos para manipulação de clientes&#10;Corrigindo listagens" />
+    <MESSAGE value="Alterando classe Main&#10;&#10;Gerar boleto com menos regras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterando classe Main&#10;&#10;Gerar boleto com menos regras" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="daoLigacoes.cliente" />
+        <watch expression="dao" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore" />
@@ -620,46 +667,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clientes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ligacoes.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="25" selection-start-column="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Operadora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#432#457#0" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="method#fazCobranca#0;class#Operadora#0" />
-            <element signature="method#analisarCusto#0;class#Operadora#0" />
-            <element signature="method#mostrarClietneTop#0;class#Operadora#0" />
-            <element signature="method#listarPorCreditoAcimaDe#0;class#Operadora#0" />
-            <element signature="method#listarSemCredito#0;class#Operadora#0" />
-            <element signature="method#ordenarPorCredito#0;class#Operadora#0" />
-            <element signature="method#pesquisaCliente#0;class#Operadora#0" />
-            <element signature="e#2782#2810#0" />
-            <element signature="e#3536#3537#0" expanded="true" />
-            <element signature="e#3628#3629#0" expanded="true" />
-            <element signature="e#3698#3699#0" expanded="true" />
-            <element signature="e#3790#3791#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -672,18 +683,6 @@
             <element signature="e#509#537#0" />
             <element signature="e#819#820#0" expanded="true" />
             <element signature="e#839#840#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="method#Cliente#0;class#Cliente#0" />
-            <element signature="method#compareTo#0;class#Cliente#0" />
-            <element signature="e#879#907#0" />
           </folding>
         </state>
       </provider>
@@ -703,14 +702,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+    <entry file="file://$PROJECT_DIR$/clientes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="method#Cliente#0;class#Cliente#0" />
+            <element signature="method#compareTo#0;class#Cliente#0" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Operadora/Operadora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="method#mostrarClietneTop#0;class#Operadora#0" />
+            <element signature="method#listarPorCreditoAcimaDe#0;class#Operadora#0" />
+            <element signature="method#listarSemCredito#0;class#Operadora#0" />
+            <element signature="method#ordenarPorCredito#0;class#Operadora#0" />
+            <element signature="method#pesquisaCliente#0;class#Operadora#0" />
+            <element signature="e#2782#2810#0" />
+            <element signature="e#3568#3569#0" expanded="true" />
+            <element signature="e#3660#3661#0" expanded="true" />
+            <element signature="e#3730#3731#0" expanded="true" />
+            <element signature="e#3822#3823#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
-            <element signature="method#relatorio#0;class#Main#0" />
+            <element signature="method#DataAccessObject#0;class#DataAccessObject#0" />
+            <element signature="e#1905#1931#0" />
+            <element signature="method#adicionar#0;class#DataAccessObject#0" />
+            <element signature="method#remover#0;class#DataAccessObject#0" />
+            <element signature="method#alterar#0;class#DataAccessObject#0" />
+            <element signature="e#2650#2651#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#2779#2780#0" expanded="true" />
+            <element signature="e#2844#2845#0" expanded="true" />
+            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#2952#2953#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3064#3065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
             <element signature="method#relatorioMenu#0;class#Main#0" />
             <element signature="method#listarClientesComMaisDe#0;class#Main#0" />
+            <element signature="e#3602#3603#0" expanded="true" />
+            <element signature="e#3651#3652#0" expanded="true" />
             <element signature="method#adicionarCliente#0;class#Main#0" />
             <element signature="method#alterarCliente#0;class#Main#0" />
             <element signature="method#deletarCliente#0;class#Main#0" />
@@ -722,29 +789,6 @@
             <element signature="method#menu#0;class#Main#0" />
             <element signature="method#leTexto#0;class#Main#0" />
             <element signature="method#leNumero#0;class#Main#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/DAO/DataAccessObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          <folding>
-            <element signature="method#DataAccessObject#0;class#DataAccessObject#0" />
-            <element signature="e#1905#1931#0" />
-            <element signature="method#adicionar#0;class#DataAccessObject#0" />
-            <element signature="method#remover#0;class#DataAccessObject#0" />
-            <element signature="method#alterar#0;class#DataAccessObject#0" />
-            <element signature="method#mostrar#0;class#DataAccessObject#0" />
-            <element signature="e#2650#2651#0" expanded="true" />
-            <element signature="e#2702#2703#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2844#2845#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#3011#3012#0" expanded="true" />
-            <element signature="e#3064#3065#0" expanded="true" />
           </folding>
         </state>
       </provider>

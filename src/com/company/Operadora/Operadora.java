@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Operadora {
-  ArrayList<Cliente> clientes;
-  ArrayList<Ligacao> ligacoes;
+  private ArrayList<Cliente> clientes;
+  private ArrayList<Ligacao> ligacoes;
 
   public Operadora() {
     this.clientes = new ArrayList<>();
@@ -41,7 +41,7 @@ public class Operadora {
         break;
       case "Pós-pago":
           cliente.setCreditos(cliente.getCreditos() + custo);
-          msg += cliente.getNome() + " deverá pagar o valor de R$" + custo + ",00";
+          msg += cliente.getNome() + " deverá pagar o valor de R$" + cliente.getCreditos() + ",00";
         break;
     }
 
