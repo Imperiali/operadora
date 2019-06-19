@@ -21,14 +21,14 @@ public class Main {
                     break;
                 case 3: deletarCliente(dao);
                     break;
-                case 4: relatorio(dao);
+                case 4: relatorio();
                     break;
             }
             opcao = menu();
         }
     }
 
-    public static void relatorio(DataAccessObject dao){
+    public static void relatorio(){
         DataAccessObject daoLigacoes = new DataAccessObject("clientes.txt", "ligacoes.txt");
         final int FIM = 0;
         int opcao;
@@ -36,24 +36,24 @@ public class Main {
         opcao = relatorioMenu();
         while (opcao != FIM) {
             switch (opcao) {
-                case 1: listarClientes(dao);
+                case 1: listarClientes(daoLigacoes);
                     break;
-                case 2: listarClientesSemCredito(dao);
+                case 2: listarClientesSemCredito(daoLigacoes);
                     break;
-                case 3: listarClientesComMaisDe(dao, leCredito());
+                case 3: listarClientesComMaisDe(daoLigacoes, leCredito());
                     break;
-                case 4: listarClienteTop(dao);
+                case 4: listarClienteTop(daoLigacoes);
                     break;
-                case 5: gerarBoleto(daoLigacoes, dao);
+                case 5: gerarBoleto(daoLigacoes);
                     break;
             }
             opcao = relatorioMenu();
         }
     }
 
-    public static void gerarBoleto(DataAccessObject daoLigacoes, DataAccessObject daoClientes){
-        listarClientes(daoClientes);
-        Cliente cliente = daoClientes.retornaCliente(daoLigacoes.pesquisaCliente(leNumero("Digite o numero")));
+    public static void gerarBoleto(DataAccessObject daoLigacoes){
+        listarClientes(daoLigacoes);
+        Cliente cliente = daoLigacoes.retornaCliente(daoLigacoes.pesquisaCliente(leNumero("Digite o numero")));
 
         System.out.println(daoLigacoes.gerarCobranca(cliente.getNumero()));
     }
