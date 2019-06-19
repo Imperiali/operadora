@@ -1,6 +1,5 @@
 package com.company.Operadora;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -8,13 +7,48 @@ public class Operadora {
   ArrayList<Cliente> clientes;
   ArrayList<Ligacao> ligacoes;
 
-  public Operadora(ArrayList<Cliente> clientes) {
-    this.clientes = clientes;
+  public Operadora() {
+    this.clientes = new ArrayList<>();
+    this.ligacoes = new ArrayList<>();
   }
 
-  public Operadora(ArrayList<Cliente> clientes, ArrayList<Ligacao> ligacoes) {
-    this.clientes = clientes;
-    this.ligacoes = ligacoes;
+  //region Manipula Cliente
+
+  public void addCliente(Cliente cliente){
+    this.clientes.add(cliente);
+  }
+
+  public void removeCliente(int indice){
+    this.clientes.remove(indice);
+  }
+
+  public void updateCliente(int indice, Cliente cliente){
+    this.clientes.set(indice, cliente);
+  }
+
+  //endregion
+
+  public String fazCobranca(Cliente cliente){
+    int custo = analisarCusto(cliente);
+    String msg = "";
+
+    msg += "------------------------------\n";
+
+    switch (cliente.getPlano()){
+      case "Pré-pago":
+          cliente.setCreditos(cliente.getCreditos() - custo);
+          msg += cliente.getNome() + " | R$" + custo + ",00 | Creditos restantes: " +  cliente.getCreditos();
+        break;
+      case "Pós-pago":
+          cliente.setCreditos(cliente.getCreditos() + custo);
+          msg += cliente.getNome() + " deverá pagar o valor de R$" + custo + ",00";
+        break;
+    }
+
+    msg += "\n------------------------------\n";
+
+    updateCliente(pesquisaCliente(cliente.getNumero()), cliente);
+    return msg;
   }
 
   public int analisarCusto(Cliente cliente){
@@ -34,32 +68,14 @@ public class Operadora {
     return minuto;
   }
 
-  public String listarLigacoes() {
-    String msg = "";
-
-    msg += "------------------------------\n";
-
-    for(Ligacao ligacao:ligacoes){
-        msg += ligacao + "\n";
-    }
-
-    if (msg.isEmpty()) {
-      msg = "Sem Clientes";
-    }
-
-    msg += "------------------------------";
-
-    return msg;
-  }
-
-  public String mostrarClietneTop() {
+  public String mostrarClienteTop() {
     ArrayList<Cliente> clientes = ordenarPorCredito();
     String msg = "";
 
     msg += "------------------------------\n";
 
-    if (msg.isEmpty()) {
-      msg = "Sem Clientes";
+    if (clientes.isEmpty()) {
+      msg = "Sem Clientes\n";
     }else {
       msg += clientes.get(clientes.size() -1) + "\n";
     }
@@ -75,14 +91,14 @@ public class Operadora {
 
     msg += "------------------------------\n";
 
-    for(Cliente cliente:clientes){
-      if (cliente.getCreditos() >= credito){
-        msg += cliente + "\n";
+    if (clientes.isEmpty()) {
+      msg = "Sem Clientes\n";
+    }else {
+      for (Cliente cliente : clientes) {
+        if (cliente.getCreditos() >= credito) {
+          msg += cliente + "\n";
+        }
       }
-    }
-
-    if (msg.isEmpty()) {
-      msg = "Sem Clientes";
     }
 
     msg += "------------------------------";
@@ -97,14 +113,14 @@ public class Operadora {
 
     msg += "------------------------------\n";
 
-    for(Cliente cliente:clientes){
-      if (cliente.getCreditos() <= abaixoDe){
-        msg += cliente + "\n";
+    if (clientes.isEmpty()) {
+      msg = "Sem Clientes\n";
+    }else {
+      for (Cliente cliente : clientes) {
+        if (cliente.getCreditos() <= abaixoDe) {
+          msg += cliente + "\n";
+        }
       }
-    }
-
-    if (msg.isEmpty()) {
-      msg = "Sem Clientes";
     }
 
     msg += "------------------------------";
