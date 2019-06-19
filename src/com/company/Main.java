@@ -54,20 +54,8 @@ public class Main {
     public static void gerarBoleto(DataAccessObject daoLigacoes, DataAccessObject daoClientes){
         listarClientes(daoClientes);
         Cliente cliente = daoClientes.retornaCliente(daoLigacoes.pesquisaCliente(leNumero("Digite o numero")));
-        int minuto = daoLigacoes.gerarCobranca(cliente.getNumero());
 
-        String cobranca = "Minutos: " + minuto + "\n";
-
-        switch (cliente.getPlano()){
-            case "Pré-pago":
-                cliente.setCreditos(cliente.getCreditos() - minuto);
-                cobranca += cliente.getNome() + " | R$" + minuto + ",00 | Creditos restantes: " +  cliente.getCreditos();
-                break;
-            case "Pós-pago":
-                cobranca += cliente.getNome() + " deverá pagar o valor de R$" + minuto + ",00";
-                break;
-        }
-        System.out.println(cobranca);
+        System.out.println(daoLigacoes.gerarCobranca(cliente.getNumero()));
     }
 
     public static int relatorioMenu(){
@@ -91,8 +79,9 @@ public class Main {
     }
 
     public static void listarClienteTop(DataAccessObject dao){
-        System.out.println(dao.mostrarClietneTop());
+        System.out.println(dao.mostrarClienteTop());
     }
+
     public static void listarClientesComMaisDe(DataAccessObject dao, float credito){
         System.out.println(dao.listarPorCreditoAcimaDe(credito));
     }
@@ -137,7 +126,6 @@ public class Main {
         int indice = dao.pesquisaCliente(numero);
         if (indice >= 0){
             boolean removeu = dao.remover(indice);
-            // todo Fazer persistencia
             if(removeu){
                 System.out.println("Cliente removido com sucesso");
             } else {
